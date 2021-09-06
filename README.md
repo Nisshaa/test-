@@ -7,7 +7,7 @@ GO
 INSERT INTO [dbo].[ProductType]
            ([Title]
            ,[DefectedPercent])
-	  ```cs
+	 
  ####   SELECT 
      distinct [Тип продукции],0  FROM [dbo].[products_k_import$]
 
@@ -26,14 +26,7 @@ INSERT INTO [dbo].[Product]
            ,[ProductionWorkshopNumber]
            ,[MinCostForAgent])
 	
-	[dbo].[Product]
-           ([Title]
-           ,[ProductTypeID]
-           ,[ArticleNumber
-           ,[Image]
-           ,[ProductionPersonCount]
-           ,[ProductionWorkshopNumber]
-           ,[MinCostForAgent]) ```cs
+	
    
    ####  SELECT 
    [Наименование продукции]
