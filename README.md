@@ -3,13 +3,14 @@
 
 USE [dminin]
 GO
-
+```cs
 INSERT INTO [dbo].[ProductType]
            ([Title]
            ,[DefectedPercent])
+	   ```cs
  ####   SELECT 
      distinct [Тип продукции],0  FROM [dbo].[products_k_import$]
- ```cs
+
 
  #### заполнение таблицы продукты:
  
