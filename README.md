@@ -26,52 +26,43 @@ SELECT
  where ki.[Тип продукции]=pt.Title
  ```
   
-#### заполнение таблицы materialType:
+## заполнение таблицы materialType:
+
+```sql
 USE [dminin]
 GO
-
 INSERT INTO [dbo].[MaterialType]
-           ([Title]
-           ,[DefectedPercent])
- ####  SELECT
-     distinct [ Тип материала],0
+	([Title],[DefectedPercent]) 
+SELECT
+     	distinct [ Тип материала],0
      
-  FROM [dbo].[materials_short_k_import$]
-#### заполнение таблицы material:  
+FROM [dbo].[materials_short_k_import$]
+```
 
+## заполнение таблицы material:  
+
+```sql
 USE [dminin]
 GO
-
 INSERT INTO [dbo].[Material]
-           ([Title]
-           ,[CountInPack]
-           ,[Unit]
-           ,[CountInStock]
-           ,[MinCount]
-           ,[Cost]     
-           ,[MaterialTypeID])
-#### SELECT 
-[Наименование материала]  
-      ,[ Количество в упаковке]
-      ,[ Единица измерения]
-      ,[ Количество на складе]
-      ,[ Минимальный возможный остаток]
-      ,[ Стоимость]
-	  ,mt.ID
-  FROM [dbo].[materials_short_k_import$]mi,MaterialType mt
-  where mi.[ Тип материала]=mt.Title
-#### заполнение таблицы productmaterial:  
+           ([Title],[CountInPack],[Unit],[CountInStock],[MinCount],[Cost],[MaterialTypeID])
+SELECT 
+	[Наименование материала]  ,[ Количество в упаковке],[ Единица измерения],[ Количество на складе],[ Минимальный возможный остаток],[ Стоимость],mt.ID
+FROM [dbo].[materials_short_k_import$]mi,MaterialType mt
+where mi.[ Тип материала]=mt.Title
+```
+
+
+## заполнение таблицы productmaterial:  
+
+```sql
 USE [dminin]
 GO
 
 INSERT INTO [dbo].[ProductMaterial]
-           ([ProductID]
-           ,[MaterialID]
-           ,[Count])
- #### SELECT 
-      p.ID
-	,m.ID
-	,l.[Необходимое количество материала]
-      
-  FROM [dbo].[Product] p,Material m, Лист1$ l
-  where p.Title=l.Продукция and m.[Title]=l.[Наименование материала]
+           ([ProductID],[MaterialID],[Count])
+SELECT 
+	p.ID,m.ID,l.[Необходимое количество материала] 
+FROM [dbo].[Product] p,Material m, Лист1$ l
+where p.Title=l.Продукция and m.[Title]=l.[Наименование материала]
+```
