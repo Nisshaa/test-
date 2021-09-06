@@ -14,22 +14,13 @@ FROM [dbo].[products_k_import$]
 ```
 
 ## заполнение таблицы продукты:
- 
-  USE [dminin]
-GO
 
+```sql
+USE [dminin]
+GO
 INSERT INTO [dbo].[Product]
-           ([Title]
-           ,[ProductTypeID]
-           ,[ArticleNumber
-           ,[Image]
-           ,[ProductionPersonCount]
-           ,[ProductionWorkshopNumber]
-           ,[MinCostForAgent])
-	
-	
-   
-   ####  SELECT 
+           ([Title] ,[ProductTypeID],[ArticleNumber ,[Image],[ProductionPersonCount]  ,[ProductionWorkshopNumber]  ,[MinCostForAgent])
+SELECT 
    [Наименование продукции]
        ,pt.ID
 	  ,[Артикул]
@@ -37,8 +28,10 @@ INSERT INTO [dbo].[Product]
       ,[Количество человек для производства]
       ,[Номер цеха для производства]
 	  ,[Минимальная стоимость для агента]
-  FROM [dbo].[products_k_import$] ki, ProductType pt
-  where ki.[Тип продукции]=pt.Title
+ FROM [dbo].[products_k_import$] ki, ProductType pt
+ where ki.[Тип продукции]=pt.Title
+ ```
+  
 #### заполнение таблицы materialType:
 USE [dminin]
 GO
