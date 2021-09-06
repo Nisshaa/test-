@@ -1,4 +1,6 @@
-sql запросы 
+# sql запросы 
+
+
 USE [dminin]
 GO
 
@@ -9,7 +11,7 @@ INSERT INTO [dbo].[ProductType]
      distinct [Тип продукции],0
      
   FROM [dbo].[products_k_import$]
-  |||||||||
+  ####
   USE [dminin]
 GO
 
