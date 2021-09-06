@@ -1,21 +1,19 @@
 # sql запросы 
- #### заполнение таблицы productType:
 
+## заполнение таблицы productType:
+
+```sql
 USE [dminin]
 GO
 
 INSERT INTO [dbo].[ProductType]
-           ([Title]
-           ,[DefectedPercent])
-	 
- ####   SELECT 
- 
- ```sql
- distinct [Тип продукции],0  FROM [dbo].[products_k_import$]
- ```
+           ([Title], [DefectedPercent])
+SELECT 
+ 	distinct [Тип продукции], 0  
+FROM [dbo].[products_k_import$]
+```
 
-
- #### заполнение таблицы продукты:
+## заполнение таблицы продукты:
  
   USE [dminin]
 GO
