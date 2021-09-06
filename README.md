@@ -9,3 +9,28 @@ INSERT INTO [dbo].[ProductType]
      distinct [Тип продукции],0
      
   FROM [dbo].[products_k_import$]
+  |||||||||
+  USE [dminin]
+GO
+
+INSERT INTO [dbo].[Product]
+           ([Title]
+           ,[ProductTypeID]
+           ,[ArticleNumber]
+       
+           ,[Image]
+           ,[ProductionPersonCount]
+           ,[ProductionWorkshopNumber]
+           ,[MinCostForAgent])
+   SELECT [Наименование продукции]
+       ,pt.ID
+	  ,[Артикул]
+ 
+      ,[Изображение]
+      
+      ,[Количество человек для производства]
+      ,[Номер цеха для производства]
+	  ,[Минимальная стоимость для агента]
+  FROM [dbo].[products_k_import$] ki, ProductType pt
+  where ki.[Тип продукции]=pt.Title
+
