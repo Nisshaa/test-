@@ -44,3 +44,26 @@ INSERT INTO [dbo].[MaterialType]
      distinct [ Тип материала],0
      
   FROM [dbo].[materials_short_k_import$]
+#### заполнение таблицы material:  
+
+USE [dminin]
+GO
+
+INSERT INTO [dbo].[Material]
+           ([Title]
+           ,[CountInPack]
+           ,[Unit]
+           ,[CountInStock]
+           ,[MinCount]
+           ,[Cost]     
+           ,[MaterialTypeID])
+#### SELECT 
+[Наименование материала]  
+      ,[ Количество в упаковке]
+      ,[ Единица измерения]
+      ,[ Количество на складе]
+      ,[ Минимальный возможный остаток]
+      ,[ Стоимость]
+	  ,mt.ID
+  FROM [dbo].[materials_short_k_import$]mi,MaterialType mt
+  where mi.[ Тип материала]=mt.Title
