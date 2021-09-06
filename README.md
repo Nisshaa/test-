@@ -10,8 +10,11 @@ INSERT INTO [dbo].[ProductType]
  ####   SELECT 
      distinct [Тип продукции],0
   FROM [dbo].[products_k_import$]
+ 
+ 
+ 
  #### заполнение таблицы продукты:
-  
+ 
   USE [dminin]
 GO
 
