@@ -33,4 +33,14 @@ INSERT INTO [dbo].[Product]
 	  ,[Минимальная стоимость для агента]
   FROM [dbo].[products_k_import$] ki, ProductType pt
   where ki.[Тип продукции]=pt.Title
+#### заполнение таблицы materialType:
+USE [dminin]
+GO
 
+INSERT INTO [dbo].[MaterialType]
+           ([Title]
+           ,[DefectedPercent])
+ ####  SELECT
+     distinct [ Тип материала],0
+     
+  FROM [dbo].[materials_short_k_import$]
