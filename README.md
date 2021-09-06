@@ -25,7 +25,9 @@ INSERT INTO [dbo].[Product]
            ,[ProductionPersonCount]
            ,[ProductionWorkshopNumber]
            ,[MinCostForAgent])
-	   ```cs
+	
+	```cs
+   
    ####  SELECT 
    [Наименование продукции]
        ,pt.ID
