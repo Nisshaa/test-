@@ -1,5 +1,5 @@
 # sql запросы 
-
+ #### заполнение таблицы productType:
 
 USE [dminin]
 GO
@@ -11,7 +11,8 @@ INSERT INTO [dbo].[ProductType]
      distinct [Тип продукции],0
      
   FROM [dbo].[products_k_import$]
-  ####
+ #### заполнение таблицы продукты:
+  
   USE [dminin]
 GO
 
