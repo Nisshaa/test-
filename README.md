@@ -19,8 +19,7 @@ GO
 INSERT INTO [dbo].[Product]
            ([Title]
            ,[ProductTypeID]
-           ,[ArticleNumber]
-       
+           ,[ArticleNumber
            ,[Image]
            ,[ProductionPersonCount]
            ,[ProductionWorkshopNumber]
@@ -28,9 +27,7 @@ INSERT INTO [dbo].[Product]
    SELECT [Наименование продукции]
        ,pt.ID
 	  ,[Артикул]
- 
       ,[Изображение]
-      
       ,[Количество человек для производства]
       ,[Номер цеха для производства]
 	  ,[Минимальная стоимость для агента]
