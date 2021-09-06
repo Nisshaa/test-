@@ -9,7 +9,10 @@ INSERT INTO [dbo].[ProductType]
            ,[DefectedPercent])
 	 
  ####   SELECT 
-     distinct [Тип продукции],0  FROM [dbo].[products_k_import$]
+ 
+ ```sql
+ distinct [Тип продукции],0  FROM [dbo].[products_k_import$]
+ ```
 
 
  #### заполнение таблицы продукты:
