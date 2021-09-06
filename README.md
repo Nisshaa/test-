@@ -24,7 +24,8 @@ INSERT INTO [dbo].[Product]
            ,[ProductionPersonCount]
            ,[ProductionWorkshopNumber]
            ,[MinCostForAgent])
-   ####  SELECT [Наименование продукции]
+   ####  SELECT 
+   [Наименование продукции]
        ,pt.ID
 	  ,[Артикул]
       ,[Изображение]
