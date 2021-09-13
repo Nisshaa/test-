@@ -103,3 +103,4 @@ where p.Title=l.Продукция and m.[Title]=l.[Наименование м�
 ```
 
 ## Диаграмма Use Case:
+![Use case](/UseCase.png)
