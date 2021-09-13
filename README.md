@@ -101,3 +101,5 @@ SELECT
 FROM [dbo].[Product] p,Material m, Лист1$ l
 where p.Title=l.Продукция and m.[Title]=l.[Наименование материала]
 ```
+
+## Диаграмма Use Case:
